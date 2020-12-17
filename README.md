@@ -7,7 +7,8 @@ API client such as Postman.
 Open a web browser, go to http://localhost/phpmyadmin/ and import the database.
 
 # Working so far:
-Create user with username, usertype and password.
+* Create user with username, usertype and password.
+* Login created user in the database with username and password.
 
 # To be done:
-Remaining stuff planned.
+* A lot tbh.
