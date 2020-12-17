@@ -10,6 +10,7 @@ Attempt at creating a basic CRUD app (RESTful API). Covers user registration and
 # Working so far:
 * Create user with username, usertype and password.
 * Login created user in the database with username and password.
+* Delete user with their ID (registered in db that is...).
 
 # To be done:
 * A lot tbh.
