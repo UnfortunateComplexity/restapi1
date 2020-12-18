@@ -1,5 +1,7 @@
 # restapi1
-Attempt at creating a basic CRUD app (RESTful API). Covers user registration and login.
+* Attempt at creating a create REST API using PHP PDO. Through this API, simple CRUD Operations can be performed, such as the ability to able to create posts, read posts, update posts and delete posts.
+* Covers user registration and login.
+
 
 # How to get it working:
 1. Start Apache and MySQL servers (recommended using a stack such as XAMPP).
