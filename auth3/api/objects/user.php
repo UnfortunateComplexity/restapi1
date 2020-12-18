@@ -1,20 +1,39 @@
 <?php
 
-// 'user' object
+/* 'user' object
+    *The User class manages the CRUD operations:
+    __construct() —> Makes the database connection ready.
+    getEmployees() — Get all records.
+    getSingleEmployee() — Get single records.
+    createEmployee() — Create record.
+    updateEmployee() — Update record.
+    deleteEmployee() — Fetch single record
+*/
+
 class User{ 
     // database connection and table name
     private $conn;
+
     private $table_name = "users";
  
-    // object properties
+    // object properties / columns
     public $id;
     public $username;
     public $password;
     public $usertype;
  
-    // constructor
+    // Database connection
     public function __construct($db){
         $this->conn = $db;
+    }
+
+    public function getUsers(){
+
+        $sqlQuery = "SELECT id, username, usertype FROM " . $this->table_name . "";
+
+        $stmt = $this->conn->prepare($sqlQuery);
+        $stmt->execute();
+        return $stmt;
     }
  
 // create new user record

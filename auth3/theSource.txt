@@ -1,3 +1,5 @@
 https://codeofaninja.com/2018/09/rest-api-authentication-example-php-jwt-tutorial.html
 
 https://www.positronx.io/create-simple-php-crud-rest-api-with-mysql-php-pdo/
+
+https://www.w3jar.com/php-login-and-registration-restful-api/

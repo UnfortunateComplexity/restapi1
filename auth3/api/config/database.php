@@ -14,12 +14,14 @@ class Database{
     public function getConnection(){
  
         $this->conn = null;
+
         try{
             //connecting with above credentials
             $this->conn = new PDO("mysql:host=".$this->host.";dbname=".$this->db_name, $this->username, $this->password);
-        }catch(PDOException $exception){
+        }
+        catch(PDOException $exception){
         //Error connecting to the database sadge
-            echo "Connection error: " . $exception->getMessage();
+            echo "Uh-oh! Database could not be connected: " . $exception->getMessage();
         }
         return $this->conn;
     }
