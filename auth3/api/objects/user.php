@@ -3,11 +3,11 @@
 /* 'user' object
     *The User class manages the CRUD operations:
     __construct() —> Makes the database connection ready.
-    getEmployees() — Get all records.
-    getSingleEmployee() — Get single records.
-    createEmployee() — Create record.
-    updateEmployee() — Update record.
-    deleteEmployee() — Fetch single record
+    getuserss() — Get all records of users registered in the database.
+    getSingleusers() — Get single records.
+    createusers() — Create record.
+    updateusers() — Update record.
+    deleteusers() — Fetch single record
 */
 
 class User{ 
@@ -37,7 +37,7 @@ class User{
     }
  
 // create new user record
-function create(){ 
+function createUser(){ 
     // insert query
      $query_create = "INSERT INTO " . $this->table_name . "
             SET  username = :username, usertype = :usertype, password = :password";
@@ -64,17 +64,17 @@ function create(){
     return false;
 }
  
+ /*
 // check if given username exists in the database
 function usernameExists(){
- 
+
     // query to check if username exists
-    $query = "SELECT *
-            FROM " . $this->table_name . "
+    $unCheckQuery = "SELECT * FROM " . $this->table_name . "
             WHERE username = ?
             LIMIT 0,1";
  
     // prepare the query
-    $stmt = $this->conn->prepare( $query );
+    $stmt = $this->conn->prepare($unCheckQuery);
  
     // clean the input username
     $this->username=htmlspecialchars(strip_tags($this->username));
@@ -106,13 +106,13 @@ function usernameExists(){
     // false --> username is not in database.
     return false;
 }
+*/
  
-// update() method will be here
 // update a user record
-public function update(){
+public function updateUser(){
  
     // if password needs to be updated
-    $password_set=!empty($this->password) ? ", password = :password" : "";
+    $password_set = (!empty($this->password) ? ", password = :password" : "");
  
     // if no POSTed password, do not update the password
     $query = "UPDATE ".$this->table_name. "
@@ -152,7 +152,8 @@ public function update(){
 }
 
 function deleteUser(){
-     // delete query
+     
+    // delete query
     $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
   
     // prepare query
