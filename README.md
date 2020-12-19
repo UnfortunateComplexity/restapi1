@@ -16,4 +16,5 @@
 * Display users registered in the database (Read inserted data).
 
 # To be done:
-* A lot tbh.
+* Implement UPDATE user correctly.
+* Apply some error handling.
